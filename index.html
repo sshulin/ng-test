@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pokeApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Test app</title>
+	<link rel="stylesheet" type="text/css" href="public/css/common.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="#!/list" class="nav__link">
+				<i class="fa fa-list-ul"></i>
+				List
+			</a>
+			<a href="#!/graph" class="nav__link">
+				<i class="fa fa-bar-chart"></i>
+				Histograms
+			</a>
+			<a href="#!/ball" class="nav__link">
+				<i class="fa fa-soccer-ball-o"></i>
+				Ball
+			</a>
+		</nav>
+	</header>
+	<div class="content" >
+		<div ng-view></div>
+	</div>
+    <script type="text/javascript" src="public/js/libs.js"></script>
+    <script type="text/javascript" src="public/js/custom.js"></script>
+</body>
+</html>

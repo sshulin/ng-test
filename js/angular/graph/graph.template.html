@@ -1,0 +1,20 @@
+<h1>Histograms</h1>
+<div class="graph">
+	<div class="graph__labels">
+		<div>
+			Toggle histogram type:
+		</div>
+		<label class="graph__label">
+			<input type="radio" value="line" ng-model="$ctrl.type" class="graph__radio">
+			<i class="fa fa-line-chart fa-2x" aria-hidden="true"></i>
+		</label>
+		<label class="graph__label">
+			<input type="radio" value="bar" ng-model="$ctrl.type" class="graph__radio">
+			<i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i>
+		</label>
+	</div>
+	<canvas class="chart chart-line" chart-data="$ctrl.data" chart-labels="$ctrl.labels" 
+	    chart-series="$ctrl.series" chart-dataset-override="$ctrl.lineDataset" ng-if="$ctrl.type == 'line'"></canvas>
+	<canvas class="chart chart-bar" chart-data="$ctrl.data" chart-labels="$ctrl.labels" 
+	    chart-series="$ctrl.series" ng-if="$ctrl.type == 'bar'"></canvas> 
+</div>	

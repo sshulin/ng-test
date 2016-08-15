@@ -1,0 +1,94 @@
+@import "../node_modules/ng-sortable/dist/ng-sortable.min";
+
+.as-sortable-placeholder {
+	background: #ccc;	
+}
+
+@import "font-awesome/font-awesome";
+
+header,
+.content {
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+nav {
+	
+}
+.nav__link {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	&:hover {
+		color: #666;
+	}	
+}
+
+.listItem {
+	background: #dedede;
+	display: flex;
+	height: 50px;
+	justify-content: space-between;
+	line-height: 50px;
+	margin: 10px 0;
+}
+.listItem__icon {
+	display: flex;
+	padding: 0 15px;
+	&._edit,
+	&._confirm {
+		cursor: pointer;
+	}
+	i {
+		margin: auto;
+	}
+}
+.listItem__checkbox {
+	display: none;
+}
+
+.graph {
+	
+}
+.graph__labels {
+	margin: 10px 0;
+}
+.graph__label {
+	cursor: pointer;
+	margin-right: 10px;
+}
+.graph__radio {
+	display: none;
+	+ i {
+		color: #999;
+	}
+	&:checked + i {
+		color: black;
+	}
+}
+
+.ball {
+	
+}
+#ballCanvas {
+	bottom: 0;
+	left: 50%;
+	position: fixed;
+}
+.ball__label {
+	cursor: pointer;
+}
+.ball__checkbox {
+	display: none;
+	+ i + i {
+		display: none;
+	}
+	&:checked {
+		+ i {
+			display: none;
+			+ i {
+				display: inline-block;
+			}
+		}
+	}
+}

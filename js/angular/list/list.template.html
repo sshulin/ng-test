@@ -1,0 +1,25 @@
+<h1>Draggable list</h1>
+<div 
+	class="list" 
+	data-as-sortable="$ctrl.dragControlListeners"
+	data-ng-model="$ctrl.items"
+	id="dragList"
+	>
+	<div 
+		data-ng-repeat="item in $ctrl.items" 
+		data-as-sortable-item
+		class="listItem"
+		>
+		<div data-as-sortable-item-handle class="listItem__icon"><i class="fa fa-sort fa-2x" aria-hidden="true"></i></div>
+		<div ng-if="!item.editable"> {{ item.name }} </div>
+		<input type="text" ng-model="item.name" ng-if="item.editable" ng-change="$ctrl.setItems()">
+		<label class="listItem__icon _edit" ng-if="!item.editable">
+			<input type="checkbox" ng-model="item.editable" class="listItem__checkbox" ng-change="$ctrl.setItems()">
+			<i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+		</label>
+		<label class="listItem__icon _confirm" ng-if="item.editable">
+			<input type="checkbox" ng-model="item.editable" class="listItem__checkbox" ng-change="$ctrl.setItems()">
+			<i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
+		</label>
+	</div>
+</div>
